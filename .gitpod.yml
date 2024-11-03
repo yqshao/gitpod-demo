@@ -1,0 +1,7 @@
+tasks:
+  - init: pip install -r requirements.txt
+  - command: gp open quickstart-demo.ipynb
+
+vscode:
+  extensions:
+    - ms-python.python
