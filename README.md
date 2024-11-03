@@ -8,10 +8,13 @@ from the client side. Gitpod is supposed to be also be useful for
 collaborative development. Personally I think they are mostly geared
 towards short-term teaching/demos.
 
-| Tool      | Mini example  | Link                                                                         |
-|-----------|---------------|------------------------------------------------------------------------------|
-| Gitpod    | `.gitpod.yml` | [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod_url] |
-| Codespace |               |                                                                              |
+| Tool      | Mini example                      | Link                                          |
+|-----------|-----------------------------------|-----------------------------------------------|
+| Gitpod    | `.gitpod.yml`                     | [![Open in Gitpod][gitpod_badge]][gitpod_url] |
+| Codespace | `.devcontainer/devcontainer.json` | [![Open in Codespace][codespace_badge]][codespace_url] |
 
-gitpod_url: https://gitpod.io/#https://github.com/yqshao/gitpod-demo
-codespace_url:
+
+[gitpod_badge]: https://img.shields.io/badge/open_in-gitpod-orange?style=flat-square&logo=gitpod
+[gitpod_url]: https://gitpod.io/#https://github.com/yqshao/gitpod-demo
+[codespace_badge]: https://img.shields.io/badge/open_in-codespace-black?style=flat-square&logo=github
+[codespace_url]: https://codespaces.new/yqshao/gitpod-demo
