@@ -1,0 +1,97 @@
+/* static/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto; 
+    font-size: 12pt;
+}
+
+.tab-bar {
+    text-decoration: none;
+    margin: 8px;
+}
+
+.tab-bar > a {
+    margin: 4px;
+}
+
+.input-bar {
+    margin: 8px;
+}
+
+.input-bar > span, .input-bar > input, .input-bar > button {
+    margin: 4px;
+}
+
+.input-bar > span {
+    color: #666;
+}
+
+.input-bar > input {
+    color: #666;
+    border: none;
+    font-size: 12pt;
+    border-bottom: 1px dotted #666;
+}
+
+.input-bar > button {
+    background-color: #ffffff;
+    color: #994455;
+    border: 1px solid #994455;
+    font-size: 12pt
+}
+
+.input-bar > button:hover {
+    background-color: #994455;
+    color: #ffffff;
+}
+
+.input-bar > input:focus {
+    outline: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+input.topic {
+    width: auto;
+    max-width: 50px;
+}
+
+input.topic {
+    width: 100%;
+}
+
+a.tab.active {
+    color: #994455;
+    font-weight: bold;
+}
+
+
+a.tab {
+    text-decoration: none;
+    color: #ccc;
+}
+
+a.tab:hover {
+    color: #666;
+}
+
+a.title, a.title:hover >span{
+    color: #994455;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.title > span, a.title:hover {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div.comment {
+    border: 1px dotted gray;
+    padding: 8px;
+    margin: 12px;
+}
