@@ -3,7 +3,7 @@ from flask import Flask, request, render_template_string, redirect, url_for
 app = Flask(__name__)
 
 # Dictionary to store comments by topic, with a default "Main" topic
-topics = {"Main": []}
+topics = {"main": []}
 
 # HTML template with tabbed navigation for topics
 html_template = """
@@ -16,7 +16,7 @@ html_template = """
   </head>
   <body>
     <div class="tab-bar">
-      <a class="title" href="{{ url_for('view_topic', topic='Main') }}">Mini<span>Forum</span></a>
+      <a class="title" href="{{ url_for('view_topic', topic='main') }}">mini<span>forum</span></a>
       {% for topic in topics %}
         <a href="{{ url_for('view_topic', topic=topic) }}" class="tab {% if current_topic == topic %}active{% endif %}">
           {{ topic }}
@@ -25,9 +25,9 @@ html_template = """
     </div>
 
     <form class="input-bar" method="POST" action="/">
-      <span>Topic:</span>
-      <input class="topic" type="text" name="topic" value="Main" required>
-      <span>Comment:</span>
+      <span>topic:</span>
+      <input class="topic" type="text" name="topic" value="main" required>
+      <span>comment:</span>
       <input type="text" name="comment" required>
       <button type="submit">Post</button>
     </form>
@@ -56,16 +56,16 @@ def index():
             topics[topic].append(comment)
 
         # Redirect to the "Main" topic after posting
-        return redirect(url_for("view_topic", topic="Main"))
+        return redirect(url_for("view_topic", topic="main"))
 
     # Render the main page, defaulting to "Main" topic
-    return redirect(url_for("view_topic", topic="Main"))
+    return redirect(url_for("view_topic", topic="main"))
 
 @app.route("/topic/<topic>")
 def view_topic(topic):
     # Ensure the topic exists, otherwise redirect to "Main"
     if topic not in topics:
-        return redirect(url_for("view_topic", topic="Main"))
+        return redirect(url_for("view_topic", topic="main"))
     # Render the page for the specified topic with its comments
     return render_template_string(html_template, topics=topics, current_topic=topic)
 
