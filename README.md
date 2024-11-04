@@ -21,7 +21,7 @@ towards short-term teaching/demos.
 ## Try it out
 
 This repo contains a small web application, try bringing up a terminal
-with ```Ctrl+` ``` run `python mini-forum/app.py`, you can share the
+with <kbd>Ctrl+\`</kbd> run `python mini-forum/app.py`, you can share the
 app with others!
 
 ## Some detials
